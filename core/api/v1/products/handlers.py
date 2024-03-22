@@ -1,11 +1,22 @@
 from django.http import HttpRequest
-from ninja import Query, Router
+
+from ninja import (
+    Query,
+    Router,
+)
 
 from core.api.filters import PaginationIn
-from core.api.schemas import ApiResponse, ListPaginatedResponse, PaginationOut
+from core.api.schemas import (
+    ApiResponse,
+    ListPaginatedResponse,
+    PaginationOut,
+)
 from core.api.v1.products.filters import ProductFilters
 from core.api.v1.products.schemas import ProductSchema
-from core.apps.products.services.products import BaseProductService, ORMProductService
+from core.apps.products.services.products import (
+    BaseProductService,
+    ORMProductService,
+)
 
 
 router = Router(tags=["Products"])
@@ -15,7 +26,7 @@ router = Router(tags=["Products"])
 def get_product_list_handler(
     request: HttpRequest,
     filters: Query[ProductFilters],
-    pagination_in: Query[PaginationIn]
+    pagination_in: Query[PaginationIn],
 ):
     service: BaseProductService = ORMProductService()
     product_list = service.get_product_list(filters=filters, pagination=pagination_in)
@@ -28,4 +39,3 @@ def get_product_list_handler(
     )
 
     return ApiResponse(data=ListPaginatedResponse(items=items, pagination=pagination_out))
-
