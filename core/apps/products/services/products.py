@@ -33,7 +33,11 @@ class ORMProductService(BaseProductService):
 
         return query
 
-    def get_product_list(self, filters: ProductFilters, pagination: PaginationIn) -> Iterable[Product]:
+    def get_product_list(
+        self,
+        filters: ProductFilters,
+        pagination: PaginationIn,
+    ) -> Iterable[Product]:
         query = self._build_product_query(filters=filters)
         qs = ProductModel.objects.filter(query)[pagination.offset:pagination.offset+pagination.limit]
 
