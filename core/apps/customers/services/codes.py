@@ -25,7 +25,7 @@ class BaseCodeService(ABC):
 
 class DjangoCacheCodeService(BaseCodeService):
     def generate_code(self, customer: Customer) -> str:
-        code = str(random.SystemRandom.randint(100000, 999999))
+        code = str(random.SystemRandom().randint(100000, 999999))
         cache.set(customer.phone, code)
         return code
 
