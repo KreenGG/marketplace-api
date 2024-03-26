@@ -1,8 +1,15 @@
-.vscode/
+# Cache
+.pytest_cache
+.ruff_cache
 *.pyc
 
+.vscode/
+.venv
+
+# Local vars and settings
 .env
 core/project/settings/local.py
 
+# Static files
 static/*
 !static/.gitkeep

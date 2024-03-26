@@ -9,6 +9,9 @@ APP_CONTAINER = main-app
 MANAGE_PY = python manage.py
 MONITORING_FILE = docker_compose/monitoring.yaml
 
+POSTGRES_USER = postgres
+POSTGRES_DB=mydatabase
+
 
 .PHONY: storages
 storages:
@@ -24,8 +27,7 @@ storages-logs:
 
 .PHONY: postgres
 postgres:
-	${EXEC} ${DB_CONTAINER} psql
-
+	${EXEC} ${DB_CONTAINER} psql -U ${POSTGRES_USER} -d ${POSTGRES_DB}
 
 .PHONY: app
 app:

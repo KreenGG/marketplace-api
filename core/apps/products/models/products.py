@@ -6,15 +6,15 @@ from core.apps.products.entities.products import Product as ProductEntity
 
 class Product(TimedBaseModel):
     title = models.CharField(
-        verbose_name="Название товара",
+        verbose_name="Title",
         max_length=255,
     )
     description = models.TextField(
-        verbose_name="Описание товара",
+        verbose_name="Description",
         blank=True,
     )
     is_visible = models.BooleanField(
-        verbose_name="Виден ли товар в каталоге",
+        verbose_name="Is visible",
         default=True,
     )
 
@@ -31,5 +31,5 @@ class Product(TimedBaseModel):
         return self.title
 
     class Meta:
-        verbose_name = "Товар"
-        verbose_name_plural = "Товары"
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
