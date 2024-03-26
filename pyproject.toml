@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-shop"
+name = "marketplace-api"
 version = "0.1.0"
 description = ""
 authors = ["Kirill Shugaev <kira.krut@yandex.ru>"]

@@ -6,3 +6,6 @@ from datetime import datetime
 class Customer:
     phone: str
     created_at: datetime
+
+    def __str__(self) -> str:
+        return self.phone
