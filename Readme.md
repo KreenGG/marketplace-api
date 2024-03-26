@@ -1,6 +1,6 @@
-# Django Shop with Docker Compose, Makefile, and PostgreSQL
+# Marketplace API
 
-This is a Shop made with Django, Docker Compose, Makefile, and PostgreSQL.
+This is a Marketplace API made with Django-ninja, Docker Compose, Makefile, and PostgreSQL.
 
 ## Requirements
 
