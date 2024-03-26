@@ -13,8 +13,8 @@ This is a Marketplace API made with Django-ninja, Docker Compose, Makefile, and 
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/KreenGG/django-best-practices.git
-    cd django-best-practices
+    git clone https://github.com/KreenGG/marketplace-api.git
+    cd marketplace-api
     ```
 
 2. Install all required packages in `Requirements` section.
