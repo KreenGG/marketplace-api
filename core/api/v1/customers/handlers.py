@@ -10,9 +10,9 @@ from core.api.v1.customers.schemas import (
     TokenInSchema,
     TokenOutSchema,
 )
-from core.apps.common.containers import get_container
 from core.apps.common.exceptions import ServiceException
 from core.apps.customers.services.auth import BaseAuthService
+from core.project.containers import get_container
 
 
 router = Router(tags=["Customers"])
